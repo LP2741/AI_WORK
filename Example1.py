@@ -49,29 +49,6 @@ elif 17 <= time <21:
 else:
      print("Good night")
 
-
-### 🎯 NumPy Array - Student Scores
-
-import numpy as np
-
-# Rows: Students, Columns: Math, Science, English
-scores = np.array([[85, 90, 88],
-                   [78, 82, 80],
-                   [92, 95, 90],
-                   [70, 75, 72]])
-
-# 1. Find average score per student (row mean)
-avg_per_student = np.mean(scores, axis=1)
-print("Average score per student:", avg_per_student)
-
-# 2. Find average score per subject (column mean)
-avg_per_subject = np.mean(scores, axis=0)
-print("Average score per subject (Math, Science, English):", avg_per_subject)
-
-# 3. Find the highest overall score
-highest_score = np.max(scores)
-print("Highest overall score:", highest_score)
-
 bmi=14
 if bmi < 18.5:
       print("Underweight")
@@ -223,6 +200,30 @@ print("str1 is str3:", str1 is str3)
 #Write validation: name must not be empty AND age must not be 0
 #Check if a dictionary has any items
 
+my_list = []
+if not my_list:
+    print("List is empty")
+else:
+    print("List is not empty")
+
+text = "Hello"
+if text:
+    print("String has content")
+else:
+    print("String is empty")
+
+name = "Lakshmi"
+age = 25
+if name and age != 0:
+    print("Validation passed")
+else:
+    print("Validation failed")
+
+my_dict = {"key": "value"}
+if my_dict:
+    print("Dictionary has items")
+else:
+    print("Dictionary is empty")
 
 
 #🎯 Practice Exercise 9
@@ -231,6 +232,29 @@ print("str1 is str3:", str1 is str3)
 #Validate age is between 18 and 65 (inclusive) using chained comparison
 #Check if temperature is in comfortable range (18-25°C)
 
+number = 42
+if 1 <= number <= 100:
+    print("Number is between 1 and 100")
+else:
+    print("Number is outside 1-100")
+
+x, y, z = 5, 10, 15
+if x < y < z:
+    print("Numbers are in ascending order")
+else:
+    print("Numbers are not in ascending order")
+
+age = 30
+if 18 <= age <= 65:
+    print("Age is within the valid range")
+else:
+    print("Age is outside the valid range")
+
+temperature = 22
+if 18 <= temperature <= 25:
+    print("Temperature is comfortable")
+else:
+    print("Temperature is not comfortable")
 
 
 #🎯 Practice Exercise 10
@@ -239,10 +263,63 @@ print("str1 is str3:", str1 is str3)
 #Set discount to 10% if purchase > 100, else 0%
 #Convert boolean to "Yes"/"No" string using ternary
 
+num = -5
+result = "Positive" if num >= 0 else "Negative"
+print(result)
+
+x = 10
+y = 20
+minimum = x if x < y else y
+print("Minimum value:", minimum)
+
+purchase = 120
+discount = 0.10 if purchase > 100 else 0.0
+print(f"Discount: {discount * 100}%")
+
+is_member = True
+status = "Yes" if is_member else "No"
+print("Member status:", status)
 
 
 #🎯 Practice Exercise 11
 #Check if number is positive, then check if it's even or odd
 #Login system: check username first, then password
-#Discount calculator: check if customer is VIP, then check purchase amount
+#Discount calculator: check if customer is VIP, 
+# then check purchase amount
 #Rewrite one nested if using logical operators
+
+value = 12
+if value > 0:
+    if value % 2 == 0:
+        print("Positive even number")
+    else:
+        print("Positive odd number")
+else:
+    print("Number is not positive")
+
+username = "admin"
+password = "1234"
+if username == "admin":
+    if password == "1234":
+        print("Login successful")
+    else:
+        print("Incorrect password")
+else:
+    print("Unknown username")
+
+is_vip = True
+purchase_amount = 150
+if is_vip:
+    if purchase_amount > 100:
+        print("VIP discount applied")
+    else:
+        print("No VIP discount, purchase too low")
+else:
+    print("No VIP discount")
+
+# Rewritten nested if using logical operators
+age = 25
+if age >= 18 and age <= 30:
+    print("Age is between 18 and 30")
+else:
+    print("Age is outside the range")
